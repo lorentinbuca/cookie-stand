@@ -1,2 +1,4 @@
-# cookie-stand
-Project Week 2 
+
+Lorentin Buca
+
+# Cookie-Stand Project Week 2--
