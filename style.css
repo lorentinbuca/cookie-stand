@@ -1,0 +1,21 @@
+body{
+  background-color: orange;
+
+}
+td {
+  background-color: gray;
+  color: red;
+}
+th{
+  background-color: gray;
+  color: black;
+}
+thead{
+  color: red;
+}
+tr{
+  color: red;
+}
+td {
+  color: black;
+}

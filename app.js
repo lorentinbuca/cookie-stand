@@ -16,21 +16,10 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
       this.hourlySales.push(Math.floor(this.avgPerCust * this.custCalc()));
       this.dailyTotal += this.hourlySales[i];
     }
-
   };
 
   this.displayData = function() {
     this.calcHourlySales();
-    var heading = document.createElement('tr');
-    var blank = document.createElement('td');
-    blank.textContent = '';
-    heading.appendChild(blank);
-
-    for(var i = 0; i < hours.length; i++) {
-      var storeHours = document.createElement('td');
-      storeHours.textContent = hours[i];
-      heading.appendChild(storeHours);
-    };
 
     var row = document.createElement('tr');
     var location = document.createElement('th');
@@ -56,26 +45,30 @@ var southCenter = new CookieStand("South Center Mall", 11, 38, 1.9);
 var bellevueSquare = new CookieStand("Bellevue Square Mall", 20, 48, 3.3);
 var alki = new CookieStand("Alki Beach", 3, 24, 2.6);
 
+
+// this is where the table is made
 var tbl = document.createElement('table');
 var headerRow = document.createElement('thead');
+//Makes an empty cell
 var emptyCell = document.createElement('td');
     headerRow.appendChild(emptyCell);
-
+//Hours are put in the top row...
 for (var i = 0; i < hours.length; i++) {
   var td = document.createElement('td');
+  td.attribute = 'class', 'td';
   td.innerHTML = hours[i];
   headerRow.appendChild(td);
 };
-  var dailyTotal = document.createElement('th');
-      dailyTotal.textContent = "Total";
-      headerRow.appendChild(dailyTotal);
-
+// Makes the word 'Total' in the top row
+var dailyTotal = document.createElement('th');
+dailyTotal.textContent = "Total";
+headerRow.appendChild(dailyTotal);
 tbl.appendChild(headerRow);
+
 pikePlace.displayData();
 seaTac.displayData();
 southCenter.displayData();
 bellevueSquare.displayData();
 alki.displayData();
 document.body.appendChild(tbl);
-
 
