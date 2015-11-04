@@ -1,8 +1,8 @@
-var hours = ['', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var hours = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
   this.storeLocations = storeLocations;
   this.minCustHr = minCustHr;
-  this.maxCustHr = maxCustHr;
+  this.maxCustHr =  maxCustHr;
   this.avgPerCust = avgPerCust;
   this.hourlySales = [];
   this.dailyTotal = 0;
@@ -16,6 +16,7 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
       this.hourlySales.push(Math.floor(this.avgPerCust * this.custCalc()));
       this.dailyTotal += this.hourlySales[i];
     }
+
   };
 
   this.displayData = function() {
@@ -42,6 +43,10 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
       row.appendChild(numCookie);
       tbl.appendChild(row);
     }
+    var totalCookie = document.createElement('tr');
+      totalCookie.textContent = this.dailyTotal;
+      row.appendChild(totalCookie);
+      tbl.appendChild(row);
   }
 };
 
@@ -53,11 +58,18 @@ var alki = new CookieStand("Alki Beach", 3, 24, 2.6);
 
 var tbl = document.createElement('table');
 var headerRow = document.createElement('thead');
+var emptyCell = document.createElement('td');
+    headerRow.appendChild(emptyCell);
+
 for (var i = 0; i < hours.length; i++) {
   var td = document.createElement('td');
   td.innerHTML = hours[i];
   headerRow.appendChild(td);
 };
+  var dailyTotal = document.createElement('th');
+      dailyTotal.textContent = "Total";
+      headerRow.appendChild(dailyTotal);
+
 tbl.appendChild(headerRow);
 pikePlace.displayData();
 seaTac.displayData();
