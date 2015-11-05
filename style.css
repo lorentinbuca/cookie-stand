@@ -1,23 +1,30 @@
 body{
-  background-color: orange;
+  background-color: none;
+  background-image: url("img/fishy.jpg");
+}
+table {
+  border: 10px solid;
+  border-radius: 10px;
 }
 td {
-  background-color: gray;
+  background-color: lightblue;
   text-decoration: thick;
   color: black;
+  white-space: none;
+  overflow: hidden;
+  border: 3px solid black;
 }
 th{
   background-color: green;
-  font-weight: bold;
+  white-space: none;
+  overflow: hidden;
+  border: 3px solid black;
+  margin: 50px;
 }
 .cell {
-  color: black;
-  text-decoration: thick;
   border-spacing: 30px;
   line-height: 25px;
   text-indent: 5px;
-  font-weight: bold;
-
 }
 .hours{
   color: black;
@@ -25,9 +32,26 @@ th{
   background-color: green;
 }
 .total {
-  color: black;
+  background-color: black;
+  color: white;
   font-weight: bold;
 }
 .empty{
   background-color: green;
+}
+.legend {
+  font-size: 50px;
+}
+label{
+  font-weight: bold;
+  font-size: 16px;
+}
+form{
+  font-weight: bold;
+  font-size: 25px;
+  font-style: Arial;
+
+}
+input{
+  font-color: red;
 }
