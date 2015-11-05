@@ -64,7 +64,6 @@ var dailyTotal = document.createElement('th');
 dailyTotal.textContent = "Total";
 headerRow.appendChild(dailyTotal);
 tbl.appendChild(headerRow);
-th.className = 'class';
 function displayAllLocations(){
   for (var i = 0; i < locations.length; i++) {
     locations[i].displayData();
