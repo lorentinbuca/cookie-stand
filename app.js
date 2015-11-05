@@ -34,7 +34,8 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
       row.appendChild(numCookie);
       tbl.appendChild(row);
     }
-    var totalCookie = document.createElement('tr');
+    var totalCookie = document.createElement('td');
+      totalCookie.setAttribute("class", "total");
       totalCookie.textContent = this.dailyTotal;
       row.appendChild(totalCookie);
       tbl.appendChild(row);
@@ -51,11 +52,13 @@ var tbl = document.createElement('table');
 var headerRow = document.createElement('thead');
 //Makes an empty cell
 var emptyCell = document.createElement('td');
+    emptyCell.setAttribute("class", "empty");
     headerRow.appendChild(emptyCell);
 //Hours are put in the top row...
 for (var i = 0; i < hours.length; i++) {
   var td = document.createElement('td');
-  td.className = 'cell';
+  td.setAttribute("class", "cell");
+  td.setAttribute("class", "hours");
   td.innerHTML = hours[i];
   headerRow.appendChild(td);
 };
@@ -64,6 +67,7 @@ var dailyTotal = document.createElement('th');
 dailyTotal.textContent = "Total";
 headerRow.appendChild(dailyTotal);
 tbl.appendChild(headerRow);
+
 function displayAllLocations(){
   for (var i = 0; i < locations.length; i++) {
     locations[i].displayData();

@@ -1,22 +1,33 @@
 body{
   background-color: orange;
-
 }
 td {
   background-color: gray;
-  color: red;
   text-decoration: thick;
+  color: black;
 }
 th{
-  background-color: gray;
-  color: black;
-  
+  background-color: green;
+  font-weight: bold;
 }
 .cell {
   color: black;
+  text-decoration: thick;
   border-spacing: 30px;
   line-height: 25px;
   text-indent: 5px;
-  border-width: thick;
-}
+  font-weight: bold;
 
+}
+.hours{
+  color: black;
+  font-weight: bold;
+  background-color: green;
+}
+.total {
+  color: black;
+  font-weight: bold;
+}
+.empty{
+  background-color: green;
+}
