@@ -5,17 +5,18 @@ body{
 td {
   background-color: gray;
   color: red;
+  text-decoration: thick;
 }
 th{
   background-color: gray;
   color: black;
+  
 }
-thead{
-  color: red;
-}
-tr{
-  color: red;
-}
-td {
+.cell {
   color: black;
+  border-spacing: 30px;
+  line-height: 25px;
+  text-indent: 5px;
+  border-width: thick;
 }
+
