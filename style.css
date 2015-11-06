@@ -1,6 +1,6 @@
 body{
-  background-color: none;
-  background-image: url("img/fishy.jpg");
+  background-color: orange;
+  background-image: url("");
 }
 table {
   border: 10px solid;
@@ -54,4 +54,18 @@ form{
 }
 input{
   font-color: red;
+}
+img{
+  width: 350px;
+  height: 200px;
+}
+ul{
+  color: blue;
+  font-family: Georgia;
+  font-weight: bold;
+}
+header, h1 {
+  color: blue;
+  font-family: Georgia sans-serif;
+  font-weight: thick;
 }
