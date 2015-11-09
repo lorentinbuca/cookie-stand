@@ -1,0 +1,86 @@
+body{
+  background-color: orange;
+  background-image: url("");
+}
+table {
+  border: 10px solid;
+  border-radius: 10px;
+}
+td {
+  background-color: lightblue;
+  text-decoration: thick;
+  color: black;
+  white-space: none;
+  overflow: hidden;
+  border: 3px solid black;
+}
+th{
+  background-color: green;
+  white-space: none;
+  overflow: hidden;
+  border: 3px solid black;
+  margin: 50px;
+}
+.cell {
+  border-spacing: 30px;
+  line-height: 25px;
+  text-indent: 5px;
+}
+.hours{
+  color: black;
+  font-weight: bold;
+  background-color: green;
+}
+.total {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.empty{
+  background-color: green;
+}
+.legend {
+  font-size: 50px;
+}
+label{
+  font-weight: bold;
+  font-size: 16px;
+}
+form{
+  font-weight: bold;
+  font-size: 25px;
+  font-style: Arial;
+
+}
+input{
+  font-color: red;
+}
+img{
+  width: 350px;
+  height: 200px;
+  vertical-align: middle;
+}
+ul{
+  color: blue;
+  font-family: Georgia;
+  font-weight: bold;
+}
+header, h1 {
+  color: blue;
+  font-family: Georgia sans-serif;
+  font-weight: thick;
+}
+figure, img {
+  font-size: 15px;
+  font-family: Arial sans-serif;
+  color: red;
+  font-weight: bold;
+}
+p {
+  text-align: center;
+  align: content: center;
+}
+#page-wrap {
+     width: 800px;
+     margin: 0 auto;
+}
